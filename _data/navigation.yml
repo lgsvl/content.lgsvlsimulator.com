@@ -1,0 +1,24 @@
+- name: Maps
+  link: /maps/
+  new_window: false
+  highlight: false
+- name: Vehicles
+  link: /vehicles/
+  new_window: false
+  highlight: false
+- name: FAQ
+  link: /faq/
+  new_window: false
+  highlight: false
+- name: Contact
+  link: /contact/
+  new_window: false
+  highlight: false
+# - name: Sensors
+#   link: /sensors/
+#   new_window: false
+#   highlight: false
+# - name: Tools
+#   link: /tools/
+#   new_window: false
+#   highlight: false

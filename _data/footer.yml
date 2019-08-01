@@ -1,0 +1,17 @@
+- links:
+  - name: Maps
+    link: /maps/
+  - name: Vehicles
+    link: /vehicles/
+- links:
+  - name: FAQ
+    link: /faq/
+  - name: Contact
+    link: /contact/
+- links:
+  - name: LGSVL Simulator
+    link: https://www.lgsvlsimulator.com
+  - name: Github
+    link: https://github.com/lgsvl/simulator
+    new_window: true
+    tracking: github-footer

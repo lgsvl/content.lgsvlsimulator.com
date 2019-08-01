@@ -1,0 +1,177 @@
+.button a, input[type=submit] {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 10px 30px;
+	background: $brand-color;
+	border-radius: 3px;
+	border: 1px solid rgba(255,255,255,.5);
+	transition: .2s ease-in-out;
+}
+
+.button a:hover, input[type=submit]:hover {
+	border: 1px solid #fff;
+	background: $secondary-brand-color;
+	cursor: pointer;
+}
+
+.button.alt a {
+	background: rgba(255,255,255,0.35);
+	border-radius: 3px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	padding: 16px 50px;
+}
+
+.button.alt a:hover {
+	background: rgba(255,255,255,0.8);
+	color: $brand-color;
+}
+
+.button-primary a, input[type=submit] {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 10px 30px;
+	background: $brand-color;
+	border-radius: 3px;
+	border: 1px solid rgba(255,255,255,1);
+	transition: .2s ease-in-out;
+	padding: 16px 15px 16px 35px;
+	box-sizing: border-box;
+}
+
+.button-primary a:hover, input[type=submit]:hover {
+	border: 1px solid #fff;
+	background: $secondary-brand-color;
+	cursor: pointer;
+}
+
+.button-primary.alt a {
+	//background: rgba(255,255,255,0.5);
+	background: #fff;
+	color: $brand-color;
+	border-radius: 3px;
+	border: 1px solid rgba(255, 255, 255, 1);
+	padding: 16px 50px;
+	// line-height: 24px;
+	vertical-align: middle;
+}
+
+.button-primary.alt a:hover {
+	background: rgba(255,255,255,0.8);
+	color: $brand-color;
+	border-radius: 3px;
+	border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.dropdown {
+	position: relative;
+	// padding: 10px 0px 20px 0px;
+}
+
+.dropdown .dropbtn {
+	background: #fff;
+	color: $brand-color;
+	border-radius: 3px;
+	border: 1px solid rgba(255, 255, 255, 1);
+	padding: 0px 2px;
+	position: relative;
+}
+
+.dropdown .dropbtn a {
+	background: #fff;
+	color: $brand-color;
+	border-radius: 3px;
+	border: 1px solid rgba(255, 255, 255, 1);
+	// display: block;
+	// position: relative;
+}
+
+.dropdown .dropbtn:hover {
+	// background: rgba(255,255,255,0.8);
+	background-color: #ddd;
+	color: $brand-color;
+	border-radius: 3px;
+	border-bottom-right-radius: 0px;
+	border: 1px solid rgba(255, 255, 255, 1);
+	cursor: pointer;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 260px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	right:0px;
+	overflow: visible;
+	width: 100%;
+	margin-right: 20px;
+	margin-top: -33px;
+}
+
+.dropdown-content a {
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#desktop {display: block;}
+#mobile {display: none;}
+
+@media screen and (max-width:768px) {
+	#desktop {display:none;}
+	#mobile {display:block;}
+}
+
+textarea, input, button, select { font-family: inherit; font-size: inherit; }
+
+input[type=submit] {
+	margin: 20px 0 0 0;
+}
+
+label, input, textarea {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+textarea {
+	resize: vertical;
+	height: 150px;
+}
+
+label {
+	margin: 20px 0 5px 0;
+}
+
+input, textarea {
+	padding: 10px;
+	font-size: 1em;
+}
+
+input, textarea {
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	border: 1px solid #DDDDDD;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus {
+	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	border: 1px solid rgba(81, 203, 238, 1);
+}

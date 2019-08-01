@@ -1,0 +1,151 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		{% seo %}
+		{% feed_meta %}
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/svl-favicon.png">
+		{% if site.google_analytics_key != '' %}
+			<script>
+				window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+				ga('create', '{{ site.google_analytics_key }}', 'auto');
+				ga('send', 'pageview');
+			</script>
+			<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+			<script async src="https://www.googletagmanager.com/gtag/js?id=AW-763873292"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag() { dataLayer.push(arguments); }
+				gtag('js', new Date());
+				gtag('config', 'AW-763873292');
+
+				function gtag_report_conversion(url) {
+					var callback = function () {
+						if (typeof(url) != 'undefined') {
+							window.location = url;
+						}
+					};
+					gtag('event', 'conversion', {
+						'send_to': 'AW-763873292/A-9gCPWcgpUBEIyQn-wC',
+						'event_callback': callback
+					});
+					return false;
+				}
+			</script>
+
+		{% endif %}
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/content-logo-01.png" alt="LGSVL logo" width="160" height="40" /></a></div>
+				{% include navigation.html %}
+			</div>
+		</header>
+		{{ content }}
+		<footer>
+			<div class="container">
+				<p class="editor-link"><a href="cloudcannon:collections/_data/footer.yml" class="btn"><strong>&#9998;</strong> Edit footer</a></p>
+				<div class="footer-columns">
+					{% for column in site.data.footer %}
+					<ul class="footer-links">
+						{% for link in column.links %}
+						  {% capture a_href %}{% include relative-src.html src=link.link %}{% endcapture %}
+							<li><a {% if link.tracking %}data-category="outbound" data-action={{link.tracking}} {%endif %}{% if link.new_window %} target="_blank"{% endif %} href="{{ a_href | strip_newlines }}"{% if link.social_icon %} class="{{ link.social_icon }}-icon"{% endif%}>
+								{% if link.social_icon %}
+									{% include social-icon.html icon=link.social_icon %}
+								{% endif %}
+								{{ link.name }}</a></li>
+						{% endfor %}
+					</ul>
+					{% endfor %}
+				</div>
+
+				<p class="copyright"><img class="footer" src="{{ site.baseurl }}/images/lg-corporate-logo.png"/> &copy; {{ site.time | date: '%Y' }} LG Electronics • <a data-category="outbound" data-action="terms-footer" href="#" target="_blank">Terms</a> &amp;
+					<a data-category="outbound" data-action="privacy-footer" href="{{ site.baseurl }}/privacy">Privacy</a>
+			</div>
+		</footer>
+		<script>
+			for (let a of document.getElementsByTagName("a")) {
+				a.onclick = function () {
+					if (a.id == "open-nav") {
+						document.body.classList.toggle("nav-open");
+					}
+					trackOutboundLink(a.dataset.category || "default", a.dataset.action || "default", a.href, a.target);
+					return false;
+				};
+			}
+			var trackOutboundLink = function(eventCategory, eventAction, url, target) {
+				ga('send', 'event', eventCategory, eventAction, url.replace(/\//g,"_"), {
+				 'transport': 'beacon',
+				 'hitCallback': function(){
+					 if (target == "_blank") {
+						 window.open(url);
+					 }
+					 else {
+						 document.location = url;
+					 }}
+				});
+				if (eventCategory != "default") {
+					ga('send', {
+					 hitType: 'pageview',
+					 title: eventAction,
+					 page: url
+					});
+				}
+			};
+
+			// Put latest release version name
+			var releaseData;
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					var data = JSON.parse(xhr.responseText);
+					let releaseData = data;
+					var x = document.getElementById("windows-download");
+
+					x.innerText = data["name"] + " for Windows (.zip)";
+					x.href = "https://github.com/lgsvl/simulator/releases/download/" + data["name"] + "/lgsvlsimulator-win64-" + data["name"] + ".zip";
+					x.addEventListener('click', function () {
+						gtag_report_conversion(x.href);
+						return true;
+					});
+
+					var y = document.getElementById("linux-download");
+					y.innerText = data["name"] + " for Linux (.zip)";
+					y.href = "https://github.com/lgsvl/simulator/releases/download/" + data["name"] + "/lgsvlsimulator-linux64-" + data["name"] + ".zip";
+					y.addEventListener('click', function () {
+						gtag_report_conversion(y.href);
+						return true;
+					});
+
+					// Detect OS
+					var OSName = "Unknown OS";
+					var osbutton = document.getElementById("download-main");
+					if (navigator.appVersion.indexOf("Win")!=-1) {
+						OSName="Windows";
+						osbutton.href = x.href;
+					}
+					else {
+						OSName="Linux";
+						osbutton.href = y.href;
+					}
+					osbutton.addEventListener('click', function () {
+						gtag_report_conversion(osbutton.href);
+						return true;
+					});
+					osbutton.innerText = "Download for " + OSName;
+				}
+			};
+			xhr.open("GET", "https://api.github.com/repos/lgsvl/simulator/releases/latest");
+			xhr.send();
+
+		</script>
+	</body>
+</html>

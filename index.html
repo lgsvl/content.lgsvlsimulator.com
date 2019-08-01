@@ -1,0 +1,92 @@
+---
+title: LGSVL Simulator Content
+description: Asset catalog for LGSVL Simulator.
+---
+
+<style>
+	h3 {
+		font-size: 1.6em;
+	}
+	h4 {
+		font-size: 1.17em;
+	}
+	@media only screen and (max-width:760px) {
+		h2 {
+			font-size: 2.0em;
+		}
+		h3 {
+			font-size: 1.4em;
+		}
+		p {
+			font-size: 1.1em;
+		}
+	}
+</style>
+
+<section class="hero">
+	<div class="container">
+		<img class="landing" src="/images/content-logo-two-line.png"/>
+	</div>
+	<div class="cta button-primary alt" style="box-sizing: border-box;"><a href="https://www.lgsvlsimulator.com/docs" target="_blank">Get Started</a></div>
+	</div>
+</section>
+
+<div class="content">
+	<section style="max-width: 1140px; margin-left:auto;margin-right:auto;">
+		<div class="container flex">
+			<div class="text editable" style="height:35px; padding: 0 0">
+				<h2 style="margin: 0 0; float:left;"><strong>Maps</strong></h2>
+				<a href="/maps/" style="float:right; margin:10px 0;">View all</a>
+			</div>
+		</div>
+		<div class="container flex" style="max-width: 1140px; align-items: flex-start; justify-content:center;">
+			{% for item in site.maps limit:3 %}
+			<div class="container" style=" flex: 0 1 33%; padding: 0 0 5px 0; text-align: center; margin: 20px 20px 20px 20px; box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);">
+				<a class="nocolor" href="{{item.url}}">
+					<div>
+						<img src="{{site.baseurl}}{{ item.image_path }}" alt="{{item.name}}" style="max-width: 100%; display:block;"/>
+						<h4 style="text-overflow: ellipsis; white-space:nowrap; overflow: hidden;">{{ item.title }}</h4>
+					</div>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</section>
+
+	<section style="max-width: 1140px; margin-left:auto;margin-right:auto;">
+		<div class="container flex">
+			<div class="text editable" style="height:35px; padding: 0 0">
+				<h2 style="margin: 0 0; float:left;"><strong>Vehicles</strong></h2>
+				<a href="/vehicles/" style="float:right; margin:10px 0;">View all</a>
+			</div>
+		</div>
+		<div class="container flex" style="max-width: 1140px; align-items: flex-start; justify-content:center;">
+			{% for item in site.vehicles limit:3 %}
+			<div class="container" style=" flex: 0 1 33%; padding: 0 0 5px 0; text-align: center; margin: 20px 20px 20px 20px; box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);">
+				<a class="nocolor" href="{{item.url}}">
+					<div>
+						<img src="{{site.baseurl}}{{ item.image_path }}" alt="{{item.name}}" style="max-width: 100%; display:block;"/>
+						<h4 style="text-overflow: ellipsis; white-space:nowrap; overflow: hidden;">{{ item.title }}</h4>
+					</div>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</section>
+
+	<section>
+		<div class="container flex" style="min-height:54px;">
+			<div class="text editable">
+				<h4><a data-category="outbound" data-action="subscribe-bottom" href="http://eepurl.com/go_1w9"  target="_blank">Subscribe</a> to our email newsletter for updates<h4>
+			</div>
+
+			<div class="text editable" style="min-height:54px;">
+				<h4><a data-category="download" data-action="content-bottom" href="https://github.com/lgsvl/simulator/releases/latest" target="_blank">Download</a> the latest release of LGSVL Simulator</h4>
+			</div>
+
+			<div class="text editable" style="min-height:54px;">
+				<h4>LGSVL Simulator <a href="https://www.lgsvlsimulator.com">website</a></h4>
+			</div>
+		</div>
+	</section>
+</div>

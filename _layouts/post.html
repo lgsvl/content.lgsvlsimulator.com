@@ -1,0 +1,21 @@
+---
+layout: page
+---
+<div class="blog-post text-container">
+	{% include post-title.html post=page %}
+
+	<p class="editor-link"><a href="cloudcannon:collections/{{ page.path }}" class="btn"><strong>&#9998;</strong> Edit Post</a></p>
+	<div class="post-content">
+		{{ content }}
+		<div class="blog-navigation">
+			{% if page.previous.url %}
+			  {% capture a_href %}{% include relative-src.html src=page.previous.url %}{% endcapture %}
+				<a class="prev" href="{{ a_href | strip_newlines }}">&laquo; {{ page.previous.title }}</a>
+			{% endif %}
+			{% if page.next.url %}
+				{% capture a_href %}{% include relative-src.html src=page.next.url %}{% endcapture %}
+				<a class="next" href="{{ a_href | strip_newlines }}">{{ page.next.title }} &raquo;</a>
+			{% endif %}
+		</div>
+	</div>
+</div>

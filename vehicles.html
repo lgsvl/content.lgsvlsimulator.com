@@ -1,0 +1,17 @@
+---
+title: Vehicles
+description: Vehicle asset bundles for LGSVL Simulator
+layout: page
+---
+<div class="content-catalog">
+	<div class="catalog-container">
+		{% for vehicle in site.vehicles %}
+		<div class="item">
+			<img src= "{{ vehicle.image_path }}" alt="picture"/>
+			<div class="text-container" style="padding: 0px;">
+				<h3><a href="{{ vehicle.url }}">{{ vehicle.name }}</a></h4>
+				<p> {{ vehicle.excerpt }} </p>
+			</div>
+		</div>
+		{% endfor %}
+</div>

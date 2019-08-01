@@ -1,0 +1,19 @@
+---
+title: Maps
+description: 3D environments and HD maps for LGSVL Simulator
+layout: page
+---
+
+<div class="content-catalog">
+	<h3><a href="{{ map.url }}">{{ map.name }}</a></h3>
+	<div class="catalog-container">
+		{% for map in site.maps %}
+		<div class="item">
+			<img src= "{{ map.image_path }}" alt="{{ map.name }}" style="max-width:456px;"/>
+			<div class="text-container" style="padding: 0px;">
+				<h3><a href="{{ map.url }}">{{ map.name }}</a></h4>
+				<p> {{ map.excerpt }} </p>
+			</div>
+		</div>
+		{% endfor %}
+</div>
