@@ -11,6 +11,7 @@
 - links:
   - name: LGSVL Simulator
     link: https://www.lgsvlsimulator.com
+    new_window: true
   - name: Github
     link: https://github.com/lgsvl/simulator
     new_window: true

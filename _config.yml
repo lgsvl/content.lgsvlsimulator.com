@@ -7,7 +7,7 @@ remote_theme: CloudCannon/hydra-jekyll-template
 title: LGSVL Simulator Content Store
 url: "https://content.lgsvlsimulator.com"
 baseurl: ""
-google_analytics_key: UA-130546445-1
+# google_analytics_key: UA-130546445-1
 google_maps_javascript_api_key:
 disqus_shortname:
 
