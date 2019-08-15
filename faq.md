@@ -20,7 +20,7 @@ title: LGSVL Simulator Content Site FAQ
 * {:.default-font .no-bullet} You can find detailed documentation on using content downloaded from this site [here](https://www.lgsvlsimulator.com/docs).
 
 #### How can I provide feedback or submit bugs about the LGSVL Simulator Content site?
-* {:.default-font .no-bullet} The best way to provide feedback, file a bug, and start a discussion about simulator features is to create Github [issue](https://github.com/lgsvl/simulator/issues) on the LGSVL Simulator Github repository. You can also email us anytime at <contact@lgsvlsimulator.com>.
+* {:.default-font .no-bullet} The best way to provide feedback, file a bug, and start a discussion about simulator features is to create a Github [issue](https://github.com/lgsvl/simulator/issues) on the LGSVL Simulator Github repository. You can also email us anytime at <contact@lgsvlsimulator.com>.
 
 #### How can I create and publish my own content (maps, vehicles, sensor models, bridge interfaces)?
 * {:.default-font .no-bullet} Currently, once you have built asset bundles for LGSVL Simulator, you can upload them to a public place online and provide the URL for other people to use. If you would like to have your content published on the LGSVL Simulator Content site, please contact us. In the future, you will be able to easily publish your asset bundles or content directly to the Content site.
