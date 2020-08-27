@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <OpenDRIVE xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <header revMajor="1" revMinor="4" name="" version="1" date="Wed, Aug 26 15:04:38 2020" north="0" south="0" east="0" west="0" vendor="LGSVL">
+    <header revMajor="1" revMinor="4" name="" version="1" date="Thu, Aug 27 13:21:25 2020" north="0" south="0" east="0" west="0" vendor="LGSVL">
         <geoReference> +proj=tmerc +lat_0=37.4169056333992 +lon_0=-122.016036660455 +k=1 +x_0=587070 +y_0=4141577 +datum=WGS84 +units=m +no_defs </geoReference>
     </header>
     <road name="" length="251.00004577636719" id="0" junction="-1">
