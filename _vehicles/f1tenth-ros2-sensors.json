@@ -3,9 +3,9 @@
     "type": "Transform",
     "name": "base_link",
     "transform": {
-      "x": -0.015,
-      "y": 0.369,
-      "z": -1.37,
+      "x": -0.0015,
+      "y": 0.0369,
+      "z": -0.137,
       "pitch": 0,
       "yaw": 0,
       "roll": 0
@@ -101,9 +101,9 @@
     },
     "parent": "base_link",
     "transform": {
-      "x": 0.022,
-      "y": 1.49,
-      "z": 1.498,
+      "x": 0.0022,
+      "y": 0.149,
+      "z": 0.1498,
       "pitch": 0,
       "yaw": 0,
       "roll": 0
@@ -127,93 +127,13 @@
         -0.25349, 0.11868, 0, 0
       ]
     },
+    "parent": "base_link",
     "transform": {
       "x": 0,
-      "y": 1.7,
-      "z": -0.2,
+      "y": 0.035,
+      "z": 0.5,
       "pitch": 0,
       "yaw": 0,
-      "roll": 0
-    }
-  },
-  {
-    "type": "Color Camera",
-    "name": "Left Camera",
-    "params": {
-      "Width": 800,
-      "Height": 600,
-      "Frequency": 15,
-      "JpegQuality": 75,
-      "FieldOfView": 70,
-      "MinDistance": 0.1,
-      "MaxDistance": 2000,
-      "Topic": "/simulator/camera_left/image/compressed",
-      "Frame": "camera",
-      "Distorted": true,
-      "DistortionParameters": [
-        -0.25349, 0.11868, 0, 0
-      ]
-    },
-    "transform": {
-      "x": 0,
-      "y": 1.7,
-      "z": -0.2,
-      "pitch": 30,
-      "yaw": 270,
-      "roll": 0
-    }
-  },
-  {
-    "type": "Color Camera",
-    "name": "Right Camera",
-    "params": {
-      "Width": 800,
-      "Height": 600,
-      "Frequency": 15,
-      "JpegQuality": 75,
-      "FieldOfView": 70,
-      "MinDistance": 0.1,
-      "MaxDistance": 2000,
-      "Topic": "/simulator/camera_right/image/compressed",
-      "Frame": "camera",
-      "Distorted": true,
-      "DistortionParameters": [
-        -0.25349, 0.11868, 0, 0
-      ]
-    },
-    "transform": {
-      "x": 0,
-      "y": 1.7,
-      "z": -0.2,
-      "pitch": 30,
-      "yaw": 90,
-      "roll": 0
-    }
-  },
-  {
-    "type": "Color Camera",
-    "name": "Rear Camera",
-    "params": {
-      "Width": 800,
-      "Height": 600,
-      "Frequency": 15,
-      "JpegQuality": 75,
-      "FieldOfView": 50,
-      "MinDistance": 0.1,
-      "MaxDistance": 2000,
-      "Topic": "/simulator/camera_rear/image/compressed",
-      "Frame": "camera",
-      "Distorted": true,
-      "DistortionParameters": [
-        -0.25349, 0.11868, 0, 0
-      ]
-    },
-    "transform": {
-      "x": 0,
-      "y": 0.7,
-      "z": -2.4,
-      "pitch": 0,
-      "yaw": 180,
       "roll": 0
     }
   },
@@ -225,9 +145,9 @@
       "Topic": "/simulator/ground_truth/detections_3d"
     },
     "transform": {
-      "x": 0.022,
-      "y": 1.49,
-      "z": 1.498,
+      "x": 0.0022,
+      "y": 0.149,
+      "z": 0.1498,
       "pitch": 0,
       "yaw": 0,
       "roll": 0
